@@ -132,8 +132,12 @@ uint32_t Mooglesp_Pin::getValue()
  */
 void Mooglesp_Pin::analogWrite(int value)
 {
-    m_analogIO.setPinNumber(m_pinNumber);
-    m_analogIO.analogWrite(value);
+    if (m_mode == OUTPUT)
+    {
+        m_value = value;
+        m_analogIO.setPinNumber(m_pinNumber);
+        m_analogIO.analogWrite(m_value);
+    }
 }
 
 /**
