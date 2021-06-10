@@ -21,8 +21,8 @@ Mooglesp_Pin::Mooglesp_Pin(uint8_t pinNumber, uint8_t mode)
     //check if mode is valid
     if (!validateMode())
     {
-        //if not, set mode to OUTPUT
-        m_mode = OUTPUT;
+        //if not, set mode to INPUT
+        m_mode = INPUT;
     }
 
     //set the pin
@@ -159,7 +159,7 @@ void Mooglesp_Pin::setMode(uint8_t mode)
 
     if (!validateMode())
     {
-        m_mode = OUTPUT;
+        m_mode = INPUT;
     }
 
     pinMode(m_pinNumber, m_mode);
