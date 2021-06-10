@@ -101,7 +101,7 @@ int Mooglesp_Pin::digitalRead()
 
 /**
  * gets the current mode of the pin
- * @param the current mode
+ * @return the current mode
  */
 uint8_t Mooglesp_Pin::getMode()
 {
@@ -110,7 +110,7 @@ uint8_t Mooglesp_Pin::getMode()
 
 /**
  * gets the current number of the pin
- * @param the current pin number
+ * @return the current pin number
  */
 uint8_t Mooglesp_Pin::getPinNumber()
 {
@@ -119,7 +119,7 @@ uint8_t Mooglesp_Pin::getPinNumber()
 
 /**
  * gets the last data value of the pin
- * @param the last data value
+ * @return the last data value
  */
 uint32_t Mooglesp_Pin::getValue()
 {
@@ -128,7 +128,7 @@ uint32_t Mooglesp_Pin::getValue()
 
 /**
  * writes an analog value to a pin
- * @param the data which should be written
+ * @param value the data which should be written
  */
 void Mooglesp_Pin::analogWrite(int value)
 {
@@ -138,7 +138,7 @@ void Mooglesp_Pin::analogWrite(int value)
 
 /**
  * writes a digital value to a pin
- * @param the data which should be written
+ * @param value the data which should be written
  */
 void Mooglesp_Pin::digitalWrite(int value)
 {
@@ -151,7 +151,7 @@ void Mooglesp_Pin::digitalWrite(int value)
 
 /**
  * sets the mode to a new value
- * @param the new value of mode
+ * @param mode the new value of mode
  */
 void Mooglesp_Pin::setMode(uint8_t mode)
 {
@@ -167,7 +167,7 @@ void Mooglesp_Pin::setMode(uint8_t mode)
 
 /**
  * sets the pin number to a new value
- * @param the new value of pin number
+ * @param pinNumber the new value of pin number
  */
 void Mooglesp_Pin::setPinNumber(uint8_t pinNumber)
 {
