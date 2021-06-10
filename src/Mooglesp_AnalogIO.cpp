@@ -270,7 +270,7 @@ int Mooglesp_AnalogIO::checkIfPinIsConnected()
 
 /**
  * writes an analog value to a pin
- * @param the data which should be written
+ * @param value the data which should be written
  */
 void Mooglesp_AnalogIO::analogWrite(int value)
 {
@@ -300,7 +300,7 @@ void Mooglesp_AnalogIO::initChannels()
 
 /**
  * sets the frequency to a new value
- * @param the new value of frequency
+ * @param frequency the new value of frequency
  */
 void Mooglesp_AnalogIO::setFrequency(uint32_t frequency)
 {
@@ -311,7 +311,7 @@ void Mooglesp_AnalogIO::setFrequency(uint32_t frequency)
 
 /**
  * sets the input time to a new value
- * @param the new value of input time
+ * @param inputTime the new value of input time
  */
 void Mooglesp_AnalogIO::setInputTime(uint32_t inputTime)
 {
@@ -320,7 +320,7 @@ void Mooglesp_AnalogIO::setInputTime(uint32_t inputTime)
 
 /**
  * sets the pin number to a new value
- * @param the new value of pin number
+ * @param pinNumber the new value of pin number
  */
 void Mooglesp_AnalogIO::setPinNumber(uint8_t pinNumber)
 {
@@ -329,7 +329,7 @@ void Mooglesp_AnalogIO::setPinNumber(uint8_t pinNumber)
 
 /**
  * sets the resolution to a new value
- * @param the new value of resoultion
+ * @param resolution the new value of resoultion
  */
 void Mooglesp_AnalogIO::setResolution(uint8_t resolution)
 {
@@ -340,7 +340,7 @@ void Mooglesp_AnalogIO::setResolution(uint8_t resolution)
 
 /**
  * sets the sample size to a new value
- * @param the new value of sample size
+ * @param sampleSize the new value of sample size
  */
 void Mooglesp_AnalogIO::setSampleSize(uint32_t sampleSize)
 {
