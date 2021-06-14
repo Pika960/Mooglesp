@@ -104,11 +104,9 @@ void Mooglesp_RGBLed::on()
  */
 void Mooglesp_RGBLed::rainbow(uint32_t delay)
 {
-    uint8_t position;
-
     for (uint8_t i = 0; i <= 255; i++)
     {
-        position = 255 - i;
+        uint8_t position = 255 - i;
 
         if (position < 85)
         {
