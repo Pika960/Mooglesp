@@ -26,6 +26,7 @@ class Mooglesp_RGBLed
         void clear();
         void off();
         void on();
+        void rainbow(uint32_t delay);
 
     //protected section
     protected:

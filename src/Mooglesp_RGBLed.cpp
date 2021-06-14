@@ -99,6 +99,39 @@ void Mooglesp_RGBLed::on()
 }
 
 /**
+ * fades the led in rainbow colors
+ * @param delay the timeframe between any operation
+ */
+void Mooglesp_RGBLed::rainbow(uint32_t delay)
+{
+    uint8_t position;
+
+    for (uint8_t i = 0; i <= 255; i++)
+    {
+        position = 255 - i;
+
+        if (position < 85)
+        {
+            setColor(255 - position * 3, 0, position * 3);
+        }
+
+        else if (position < 170)
+        {
+            position -= 85;
+            setColor(0, position * 3, 255 - position * 3);
+        }
+
+        else
+        {
+            position -= 170;
+            setColor(position * 3, 255 - position * 3, 0);
+        }
+
+        ::delay(delay);
+    }
+}
+
+/**
  * sets the color of the led according to red, green and blue value
  * @param red color value of the red led
  * @param green color value of the green led
