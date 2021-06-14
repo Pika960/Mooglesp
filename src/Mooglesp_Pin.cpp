@@ -11,13 +11,6 @@ Mooglesp_Pin::Mooglesp_Pin(uint8_t pinNumber, uint8_t mode)
     m_mode      = mode;
     m_value     = LOW;
 
-    //check if pin number is greater then zero
-    if (m_pinNumber < 0)
-    {
-        //if not, set pin number to zero
-        m_pinNumber = 0;
-    }
-
     //check if mode is valid
     if (!validateMode())
     {
