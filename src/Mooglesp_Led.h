@@ -18,7 +18,7 @@ class Mooglesp_Led : public Mooglesp_Pin
         void blink(uint32_t cycles, uint32_t delay);
         void fade(uint8_t start, uint8_t end, uint32_t delay);
         void off();
-        void on();
+        void on(uint8_t brightness = 255);
 
     //private section:
     private:

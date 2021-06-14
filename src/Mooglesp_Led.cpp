@@ -75,15 +75,14 @@ void Mooglesp_Led::fade(uint8_t start, uint8_t end, uint32_t delay)
  */
 void Mooglesp_Led::off()
 {
-    m_value = LOW;
-    digitalWrite(m_value);
+    analogWrite(0);
 }
 
 /**
  * turns the led on
+ * @param brightness the brightness value of the led (defaults to 255)
  */
-void Mooglesp_Led::on()
+void Mooglesp_Led::on(uint8_t brightness)
 {
-    m_value = HIGH;
-    digitalWrite(m_value);
+    analogWrite(brightness);
 }
