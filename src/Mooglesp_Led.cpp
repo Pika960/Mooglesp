@@ -34,11 +34,18 @@ bool Mooglesp_Led::state()
  */
 void Mooglesp_Led::blink(uint32_t cycles, uint32_t delay, uint8_t brightness)
 {
-    for (int i = 0; i < cycles; i++)
+    for (uint32_t i = 0; i < (cycles * 2); i++)
     {
-        on(brightness);
-        ::delay(delay);
-        off();
+        if (!state())
+        {
+            on(brightness);
+        }
+
+        else
+        {
+            off();
+        }
+
         ::delay(delay);
     }
 }
