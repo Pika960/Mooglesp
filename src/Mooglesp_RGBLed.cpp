@@ -70,6 +70,61 @@ uint32_t Mooglesp_RGBLed::getColor()
 }
 
 /**
+ * lets the led turn on and off (blink) a set number of times
+ * @param cycles the number of times the led should blink
+ * @param delay the timeframe between on and off
+ * @param red color value of the red led
+ * @param green color value of the green led
+ * @param blue color value of the blue led
+ */
+void Mooglesp_RGBLed::blink(uint32_t cycles, uint32_t delay,
+    byte red, byte green, byte blue)
+{
+    setColor(red, green, blue, false);
+
+    for (uint32_t i = 0; i < (cycles * 2); i++)
+    {
+        if (!state())
+        {
+            on();
+        }
+
+        else
+        {
+            off();
+        }
+
+        ::delay(delay);
+    }
+}
+
+/**
+ * lets the led turn on and off (blink) a set number of times
+ * @param cycles the number of times the led should blink
+ * @param delay the timeframe between on and off
+ * @param color color value of the led
+ */
+void Mooglesp_RGBLed::blink(uint32_t cycles, uint32_t delay, uint32_t color)
+{
+    setColor(color, false);
+
+    for (uint32_t i = 0; i < (cycles * 2); i++)
+    {
+        if (!state())
+        {
+            on();
+        }
+
+        else
+        {
+            off();
+        }
+
+        ::delay(delay);
+    }
+}
+
+/**
  * clears all color values and writes it to the led
  */
 void Mooglesp_RGBLed::clear()

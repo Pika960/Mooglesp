@@ -33,6 +33,10 @@ class Mooglesp_RGBLed
 
         //core functions
         bool state();
+        void blink(uint32_t cycles, uint32_t delay,
+            byte red, byte green, byte blue);
+        void blink(uint32_t cycles, uint32_t delay,
+            uint32_t color = 0xFFFFFF);
         void clear();
         void off();
         void on();
