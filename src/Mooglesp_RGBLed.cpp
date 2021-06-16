@@ -143,28 +143,34 @@ void Mooglesp_RGBLed::rainbow(uint32_t delay)
  * @param green color value of the green led
  * @param blue color value of the blue led
  */
-void Mooglesp_RGBLed::setColor(byte red, byte green, byte blue)
+void Mooglesp_RGBLed::setColor(byte red, byte green, byte blue, bool write)
 {
     m_color = (uint8_t(red) << 16) | (uint8_t(green) << 8) | uint8_t(blue);
     m_colorBlue  = blue;
     m_colorGreen = green;
     m_colorRed   = red;
 
-    writeColor(m_colorRed, m_colorGreen, m_colorBlue);
+    if (write)
+    {
+        writeColor(m_colorRed, m_colorGreen, m_colorBlue);
+    }
 }
 
 /**
  * sets the color of the led according to an rgb value
  * @param color color value of the led
  */
-void Mooglesp_RGBLed::setColor(uint32_t color)
+void Mooglesp_RGBLed::setColor(uint32_t color, bool write)
 {
     m_color      = color;
     m_colorBlue  = color & 0xff;
     m_colorGreen = (color >>  8) & 0xff;
     m_colorRed   = (color >> 16) & 0xff;
 
-    writeColor(m_colorRed, m_colorGreen, m_colorBlue);
+    if (write)
+    {
+        writeColor(m_colorRed, m_colorGreen, m_colorBlue);
+    }
 }
 
 /**

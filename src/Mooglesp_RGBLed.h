@@ -28,8 +28,8 @@ class Mooglesp_RGBLed
         byte     getColorGreen();
         byte     getColorRed();
         uint32_t getColor();
-        void     setColor(byte red, byte green, byte blue);
-        void     setColor(uint32_t color);
+        void     setColor(byte red, byte green, byte blue, bool write = true);
+        void     setColor(uint32_t color, bool write = true);
 
         //core functions
         bool state();
