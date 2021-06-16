@@ -95,7 +95,15 @@ void Mooglesp_RGBLed::off()
  */
 void Mooglesp_RGBLed::on()
 {
-    writeColor(m_colorRed, m_colorGreen, m_colorBlue);
+    if (m_colorRed == 0 && m_colorGreen == 0 && m_colorBlue == 0)
+    {
+        writeColor(255, 255, 255);
+    }
+
+    else
+    {
+        writeColor(m_colorRed, m_colorGreen, m_colorBlue);
+    }
 }
 
 /**
