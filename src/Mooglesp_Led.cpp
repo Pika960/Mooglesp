@@ -51,22 +51,24 @@ void Mooglesp_Led::blink(uint32_t cycles, uint32_t delay)
  */
 void Mooglesp_Led::fade(uint8_t start, uint8_t end, uint32_t delay)
 {
+    uint8_t i = start;
+
     if (start < end)
     {
-        for (uint i = start; i <= end; ++i)
+        do
         {
             analogWrite(i);
             ::delay(delay);
-        }
+        } while (i++ != 255);
     }
 
     else
     {
-        for (uint i = start; i+1 > end; --i)
+        do
         {
             analogWrite(i);
             ::delay(delay);
-        }
+        } while (i--);
     }
 }
 
