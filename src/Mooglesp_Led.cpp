@@ -31,6 +31,7 @@ bool Mooglesp_Led::state()
  * lets the led turn on and off (blink) a set number of times
  * @param cycles the number of times the led should blink
  * @param delay the timeframe between on and off
+ * @param brightness the brightness value of the led (defaults to 255)
  */
 void Mooglesp_Led::blink(uint32_t cycles, uint32_t delay, uint8_t brightness)
 {
