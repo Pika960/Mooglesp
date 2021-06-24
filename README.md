@@ -49,3 +49,12 @@ select the extracted folder (or the zip file)
 3. Clone the repository into this folder
     - you can get the URL from the main project page
 4. Restart your Arduino IDE
+
+### A note on compatibility
+
+This library was tested with the WEMOS LOLIN32 lite (ESP32) board and
+therefore I can only guarantee that this library will work as intended
+on this board. Technically, it should work absolutely fine on any board
+compatible with the ESP32 architecture.
+
+Have fun developing, kupo.
