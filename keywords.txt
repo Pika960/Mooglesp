@@ -1,0 +1,60 @@
+#######################################
+# Syntax Coloring Map For Mooglesp
+#######################################
+# Class (KEYWORD1)
+#######################################
+
+Mooglesp_AnalogIO	KEYWORD1
+Mooglesp_Button	KEYWORD1
+Mooglesp_Led	KEYWORD1
+Mooglesp_Pin	KEYWORD1
+Mooglesp_RGBLed	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+analogRead	KEYWORD2
+analogReadSmooth	KEYWORD2
+analogWrite	KEYWORD2
+blink	KEYWORD2
+clear	KEYWORD2
+digitalRead	KEYWORD2
+digitalWrite	KEYWORD2
+fade	KEYWORD2
+getColor	KEYWORD2
+getColorBlue	KEYWORD2
+getColorGreen	KEYWORD2
+getColorRed	KEYWORD2
+getMode	KEYWORD2
+getPinNumber	KEYWORD2
+getValue	KEYWORD2
+isPressed	KEYWORD2
+isReleased	KEYWORD2
+off	KEYWORD2
+on	KEYWORD2
+rainbow	KEYWORD2
+read	KEYWORD2
+setColor	KEYWORD2
+setFrequency	KEYWORD2
+setInputTime	KEYWORD2
+setMode	KEYWORD2
+setPinNumber	KEYWORD2
+setResolution	KEYWORD2
+setSampleSize	KEYWORD2
+state	KEYWORD2
+wasPressed	KEYWORD2
+wasReleased	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+MOOGLESP_RGBLED_COLOR_BLACK	LITERAL1
+MOOGLESP_RGBLED_COLOR_BLUE	LITERAL1
+MOOGLESP_RGBLED_COLOR_CYAN	LITERAL1
+MOOGLESP_RGBLED_COLOR_GREEN	LITERAL1
+MOOGLESP_RGBLED_COLOR_MAGENTA	LITERAL1
+MOOGLESP_RGBLED_COLOR_RED	LITERAL1
+MOOGLESP_RGBLED_COLOR_WHITE	LITERAL1
+MOOGLESP_RGBLED_COLOR_YELLOW	LITERAL1
