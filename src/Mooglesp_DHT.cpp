@@ -127,7 +127,7 @@ float Mooglesp_DHT::getTemperature(bool fahrenheit)
     //convert temperature to fahrenheit if flag is set to true
     if (fahrenheit)
     {
-        return (m_temperature - 32) * 0.55555;
+        return (m_temperature * 1.8) + 32;
     }
 
     return m_temperature;
