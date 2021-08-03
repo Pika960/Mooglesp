@@ -2,7 +2,7 @@
 #define MOOGLESP_DHT_H
 
 //includes
-#include <Mooglesp_Pin.h>
+#include "Mooglesp_Pin.h"
 
 //defines
 #define MOOGLESP_DHT_DATA_INVALID 9999
