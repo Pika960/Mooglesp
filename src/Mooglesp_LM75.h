@@ -25,6 +25,7 @@ class Mooglesp_LM75
         float getOverTemperature(bool fahrenheit = false);
         float getTemperature(bool fahrenheit = false);
         void  setHysteresis(uint8_t hysteresis);
+        void  setOverTemperature(uint8_t overTemperature);
 
         //core functions
         bool begin(uint8_t sda, uint8_t scl, uint32_t frequency);

@@ -134,6 +134,15 @@ void Mooglesp_LM75::setHysteresis(uint8_t hysteresis)
 }
 
 /**
+ * sets the over-temperature to a new value
+ * @param overTemperature the new value of over-temperature
+ */
+void Mooglesp_LM75::setOverTemperature(uint8_t overTemperature)
+{
+    writeRegister(MOOGLESP_LM75_REGISTER_TOS, (overTemperature * 256));
+}
+
+/**
  * writes data to a data register
  * @param address the address of the register
  * @param data the new value of the register
