@@ -39,6 +39,7 @@ class Mooglesp_LM75
 
         //internal functions
         void readRegister(uint8_t address);
+        void writeRegister(uint8_t address, uint32_t data);
 };
 
 #endif

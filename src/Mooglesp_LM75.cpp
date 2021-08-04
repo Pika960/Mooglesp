@@ -123,3 +123,22 @@ void Mooglesp_LM75::readRegister(uint8_t address)
         }
     }
 }
+
+/**
+ * writes data to a data register
+ * @param address the address of the register
+ * @param data the new value of the register
+ */
+void Mooglesp_LM75::writeRegister(uint8_t address, uint32_t data)
+{
+    m_wire.beginTransmission(m_address);
+    m_wire.write(address);
+
+    if (address != MOOGLESP_LM75_REGISTER_CONFIGURATION)
+    {
+        m_wire.write((data >> 8) & 0xFF);
+    }
+
+    m_wire.write(data & 0xFF);
+    m_wire.endTransmission();
+}
