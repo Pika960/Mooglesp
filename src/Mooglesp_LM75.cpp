@@ -125,6 +125,15 @@ void Mooglesp_LM75::readRegister(uint8_t address)
 }
 
 /**
+ * sets the hysteresis to a new value
+ * @param hysteresis the new value of hysteresis
+ */
+void Mooglesp_LM75::setHysteresis(uint8_t hysteresis)
+{
+    writeRegister(MOOGLESP_LM75_REGISTER_THYST, (hysteresis * 256));
+}
+
+/**
  * writes data to a data register
  * @param address the address of the register
  * @param data the new value of the register
