@@ -45,8 +45,10 @@ rainbow	KEYWORD2
 read	KEYWORD2
 setColor	KEYWORD2
 setFrequency	KEYWORD2
+setHysteresis	KEYWORD2
 setInputTime	KEYWORD2
 setMode	KEYWORD2
+setOverTemperature	KEYWORD2
 setPinNumber	KEYWORD2
 setResolution	KEYWORD2
 setSampleSize	KEYWORD2
