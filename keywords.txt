@@ -9,6 +9,7 @@ Mooglesp_Button	KEYWORD1
 Mooglesp_DHT	KEYWORD1
 Mooglesp_Led	KEYWORD1
 Mooglesp_LM75	KEYWORD1
+Mooglesp_MHZ19	KEYWORD1
 Mooglesp_Pin	KEYWORD1
 Mooglesp_RGBLed	KEYWORD1
 
@@ -22,14 +23,20 @@ analogWrite	KEYWORD2
 begin	KEYWORD2
 blink	KEYWORD2
 clear	KEYWORD2
+configureAutoCalibration	KEYWORD2
+configureSpanCalibration	KEYWORD2
 digitalRead	KEYWORD2
 digitalWrite	KEYWORD2
+enableZeroCalibration	KEYWORD2
 fade	KEYWORD2
+getAutoCalibrationStatus	KEYWORD2
+getCO2	KEYWORD2
 getColor	KEYWORD2
 getColorBlue	KEYWORD2
 getColorGreen	KEYWORD2
 getColorRed	KEYWORD2
 getData	KEYWORD2
+getFirmwareVersion	KEYWORD2
 getHumidity	KEYWORD2
 getHysteresis	KEYWORD2
 getMode	KEYWORD2
@@ -39,6 +46,7 @@ getTemperature	KEYWORD2
 getValue	KEYWORD2
 isPressed	KEYWORD2
 isReleased	KEYWORD2
+isWarmingUp	KEYWORD2
 off	KEYWORD2
 on	KEYWORD2
 rainbow	KEYWORD2
