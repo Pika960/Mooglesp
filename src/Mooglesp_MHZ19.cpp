@@ -132,6 +132,16 @@ uint8_t Mooglesp_MHZ19::calculateChecksum(uint8_t command[])
 }
 
 /**
+ * gets the current rx pin number
+ * @return the current rx pin number
+ */
+uint8_t Mooglesp_MHZ19::getRX()
+{
+    //return the current rx pin number
+    return m_rx;
+}
+
+/**
  * creates a command sequence
  * @param type the command you want to build
  * @param command an array in which the command sequence will be stored
@@ -288,6 +298,16 @@ void Mooglesp_MHZ19::measurement()
         m_currentCO2  = -1;
         m_temperature = -1;
     }
+}
+
+/**
+ * sets the rx pin number to a new value
+ * @param rx the new value of the rx pin number
+ */
+void Mooglesp_MHZ19::setRX(uint8_t rx)
+{
+    //update the rx pin number
+    m_rx = rx;
 }
 
 /**
