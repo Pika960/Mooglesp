@@ -37,7 +37,7 @@ bool Mooglesp_RGBLed::state()
  * gets the current blue color value
  * @return current color value of the blue led
  */
-byte Mooglesp_RGBLed::getColorBlue()
+uint8_t Mooglesp_RGBLed::getColorBlue()
 {
     return m_colorBlue;
 }
@@ -46,7 +46,7 @@ byte Mooglesp_RGBLed::getColorBlue()
  * gets the current green color value
  * @return current color value of the green led
  */
-byte Mooglesp_RGBLed::getColorGreen()
+uint8_t Mooglesp_RGBLed::getColorGreen()
 {
     return m_colorGreen;
 }
@@ -55,7 +55,7 @@ byte Mooglesp_RGBLed::getColorGreen()
  * gets the current red color value
  * @return current color value of the red led
  */
-byte Mooglesp_RGBLed::getColorRed()
+uint8_t Mooglesp_RGBLed::getColorRed()
 {
     return m_colorRed;
 }
@@ -78,7 +78,7 @@ uint32_t Mooglesp_RGBLed::getColor()
  * @param blue color value of the blue led
  */
 void Mooglesp_RGBLed::blink(uint32_t cycles, uint32_t delay,
-    byte red, byte green, byte blue)
+    uint8_t red, uint8_t green, uint8_t blue)
 {
     setColor(red, green, blue, false);
 
@@ -201,7 +201,8 @@ void Mooglesp_RGBLed::rainbow(uint32_t delay)
  * @param blue color value of the blue led
  * @param write if set the color will be written to the led (defaults to true)
  */
-void Mooglesp_RGBLed::setColor(byte red, byte green, byte blue, bool write)
+void Mooglesp_RGBLed::setColor(uint8_t red, uint8_t green, uint8_t blue,
+    bool write)
 {
     m_color = (uint8_t(red) << 16) | (uint8_t(green) << 8) | uint8_t(blue);
     m_colorBlue  = blue;
@@ -238,7 +239,7 @@ void Mooglesp_RGBLed::setColor(uint32_t color, bool write)
  * @param green color value of the green led
  * @param blue color value of the blue led
  */
-void Mooglesp_RGBLed::writeColor(byte red, byte green, byte blue)
+void Mooglesp_RGBLed::writeColor(uint8_t red, uint8_t green, uint8_t blue)
 {
     m_ledRed.analogWrite(red);
     m_ledGreen.analogWrite(green);

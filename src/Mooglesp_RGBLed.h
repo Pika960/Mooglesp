@@ -24,17 +24,18 @@ class Mooglesp_RGBLed
         ~Mooglesp_RGBLed();
 
         //getter and setter
-        byte     getColorBlue();
-        byte     getColorGreen();
-        byte     getColorRed();
+        uint8_t  getColorBlue();
+        uint8_t  getColorGreen();
+        uint8_t  getColorRed();
         uint32_t getColor();
-        void     setColor(byte red, byte green, byte blue, bool write = true);
-        void     setColor(uint32_t color, bool write = true);
+        void setColor(uint8_t red, uint8_t green,
+            uint8_t blue, bool write = true);
+        void setColor(uint32_t color, bool write = true);
 
         //core functions
         bool state();
         void blink(uint32_t cycles, uint32_t delay,
-            byte red, byte green, byte blue);
+            uint8_t red, uint8_t green, uint8_t blue);
         void blink(uint32_t cycles, uint32_t delay,
             uint32_t color = 0xFFFFFF);
         void clear();
@@ -50,13 +51,13 @@ class Mooglesp_RGBLed
         Mooglesp_Led m_ledRed;
 
         //internal values
-        byte     m_colorBlue;
-        byte     m_colorGreen;
-        byte     m_colorRed;
+        uint8_t  m_colorBlue;
+        uint8_t  m_colorGreen;
+        uint8_t  m_colorRed;
         uint32_t m_color;
 
         //internal functions
-        void writeColor(byte red, byte green, byte blue);
+        void writeColor(uint8_t red, uint8_t green, uint8_t blue);
 };
 
 #endif
