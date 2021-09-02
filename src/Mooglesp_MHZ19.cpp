@@ -142,6 +142,16 @@ uint8_t Mooglesp_MHZ19::getRX()
 }
 
 /**
+ * gets the current tx pin number
+ * @return the current tx pin number
+ */
+uint8_t Mooglesp_MHZ19::getTX()
+{
+    //return the current tx pin number
+    return m_tx;
+}
+
+/**
  * creates a command sequence
  * @param type the command you want to build
  * @param command an array in which the command sequence will be stored
@@ -308,6 +318,16 @@ void Mooglesp_MHZ19::setRX(uint8_t rx)
 {
     //update the rx pin number
     m_rx = rx;
+}
+
+/**
+ * sets the tx pin number to a new value
+ * @param tx the new value of the tx pin number
+ */
+void Mooglesp_MHZ19::setTX(uint8_t tx)
+{
+    //update the tx pin number
+    m_tx = tx;
 }
 
 /**

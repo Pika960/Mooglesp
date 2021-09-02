@@ -39,8 +39,10 @@ class Mooglesp_MHZ19
         int8_t  getTemperature(bool fahrenheit = false);
         int16_t getCO2();
         uint8_t getRX();
+        uint8_t getTX();
         void    getFirmwareVersion(char firmwareVersion[]);
         void    setRX(uint8_t rx);
+        void    setTX(uint8_t tx);
 
         //core functions
         bool isWarmingUp();
