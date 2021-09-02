@@ -138,6 +138,73 @@ void Mooglesp_RGBLed::clear()
 }
 
 /**
+ * fades the led from the current color to a new one
+ * @param delay the timeframe between any operation
+ * @param red color value of the red led
+ * @param green color value of the green led
+ * @param blue color value of the blue led
+ */
+void Mooglesp_RGBLed::fade(uint32_t delay, uint8_t red, uint8_t green,
+    uint8_t blue)
+{
+    uint8_t backup_red   = m_colorRed;
+    uint8_t backup_green = m_colorGreen;
+    uint8_t backup_blue  = m_colorBlue;
+
+    setColor(red, green, blue, false);
+
+    int16_t diff_red   = (int16_t)m_colorRed   - (int16_t)backup_red;
+    int16_t diff_green = (int16_t)m_colorGreen - (int16_t)backup_green;
+    int16_t diff_blue  = (int16_t)m_colorBlue  - (int16_t)backup_blue;
+
+    uint8_t i = 0;
+
+    do
+    {
+        uint8_t r = backup_red   + i * diff_red   / 256;
+        uint8_t g = backup_green + i * diff_green / 256;
+        uint8_t b = backup_blue  + i * diff_blue  / 256;
+
+        writeColor(r, g, b);
+        ::delay(delay);
+    } while (i++ != 255);
+
+    writeColor(m_colorRed, m_colorGreen, m_colorBlue);
+}
+
+/**
+ * fades the led from the current color to a new one
+ * @param delay the timeframe between any operation
+ * @param color color value of the led
+ */
+void Mooglesp_RGBLed::fade(uint32_t delay, uint32_t color)
+{
+    uint8_t backup_red   = m_colorRed;
+    uint8_t backup_green = m_colorGreen;
+    uint8_t backup_blue  = m_colorBlue;
+
+    setColor(color, false);
+
+    int16_t diff_red   = (int16_t)m_colorRed   - (int16_t)backup_red;
+    int16_t diff_green = (int16_t)m_colorGreen - (int16_t)backup_green;
+    int16_t diff_blue  = (int16_t)m_colorBlue  - (int16_t)backup_blue;
+
+    uint8_t i = 0;
+
+    do
+    {
+        uint8_t r = backup_red   + i * diff_red   / 256;
+        uint8_t g = backup_green + i * diff_green / 256;
+        uint8_t b = backup_blue  + i * diff_blue  / 256;
+
+        writeColor(r, g, b);
+        ::delay(delay);
+    } while (i++ != 255);
+
+    writeColor(m_colorRed, m_colorGreen, m_colorBlue);
+}
+
+/**
  * turns the led off
  */
 void Mooglesp_RGBLed::off()

@@ -39,6 +39,8 @@ class Mooglesp_RGBLed
         void blink(uint32_t cycles, uint32_t delay,
             uint32_t color = 0xFFFFFF);
         void clear();
+        void fade(uint32_t delay, uint8_t red, uint8_t green, uint8_t blue);
+        void fade(uint32_t delay, uint32_t color);
         void off();
         void on();
         void rainbow(uint32_t delay);
