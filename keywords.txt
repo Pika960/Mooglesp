@@ -42,7 +42,9 @@ getHysteresis	KEYWORD2
 getMode	KEYWORD2
 getOverTemperature	KEYWORD2
 getPinNumber	KEYWORD2
+getRX	KEYWORD2
 getTemperature	KEYWORD2
+getTX	KEYWORD2
 getValue	KEYWORD2
 isPressed	KEYWORD2
 isReleased	KEYWORD2
@@ -59,7 +61,9 @@ setMode	KEYWORD2
 setOverTemperature	KEYWORD2
 setPinNumber	KEYWORD2
 setResolution	KEYWORD2
+setRX	KEYWORD2
 setSampleSize	KEYWORD2
+setTX	KEYWORD2
 state	KEYWORD2
 wasPressed	KEYWORD2
 wasReleased	KEYWORD2
